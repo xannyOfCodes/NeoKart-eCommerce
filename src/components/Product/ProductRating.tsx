@@ -1,5 +1,5 @@
-import yellowStar from "../../../public/assets/star-yellow.png"
-import whiteStar from "../../../public/assets/star-white.png"
+import yellowStar from "../../../public/star-yellow.png"
+import whiteStar from "../../../public/star-white.png"
 import { getRatingStars } from "../../utils/getRatingStars";
 
 
