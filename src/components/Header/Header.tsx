@@ -1,4 +1,4 @@
-import React, { type FC } from 'react'
+import { type FC } from 'react'
 import CartIcon from './CartIcon'
 import SearchIcon from './SearchIcon'
 import Logo from './Logo'

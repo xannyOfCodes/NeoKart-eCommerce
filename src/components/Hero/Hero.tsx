@@ -29,12 +29,12 @@ const Hero: React.FC = () => {
   const goToSlide = (index: number) => {
     setCurrentIndex(index);
   };
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev -1 + slideCount) % slideCount);
-  };
-  const nextSlide = () => {
-    setCurrentIndex((prev) => ( prev +1 ) % slideCount);
-  };
+  // const prevSlide = () => {
+  //   setCurrentIndex((prev) => (prev -1 + slideCount) % slideCount);
+  // };
+  // const nextSlide = () => {
+  //   setCurrentIndex((prev) => ( prev +1 ) % slideCount);
+  // };
 
   return (
      <div className='p-[1rem]'>
