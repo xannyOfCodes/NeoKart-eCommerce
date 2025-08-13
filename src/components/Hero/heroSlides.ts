@@ -11,7 +11,7 @@ export type HeroSlidesTypes = {
 export const heroSlides: HeroSlidesTypes[] = [
     {
         id: 1,
-        img: "../../../public/fashion.jpg",
+        img: "/fashion.jpg",
         heading: "Style That Moves You",
         subheading: "Shop the latest fashion trends and elevate your wardrobe.",
         ctaText: "Shop Fashion",
@@ -19,7 +19,7 @@ export const heroSlides: HeroSlidesTypes[] = [
     },
     {
         id: 2,
-        img: "../../../public/tech.jpg",
+        img: "/tech.jpg",
         heading: "Upgrade Your Tech Life",
         subheading: "Discover gadgets that make everyday smarter.",
         ctaText: "Explore Tech",
@@ -27,7 +27,7 @@ export const heroSlides: HeroSlidesTypes[] = [
     },
     {
         id: 3,
-        img: "../../../public/home.jpg",
+        img: "/home.jpg",
         heading: "Comfort Meets Class",
         subheading: "Modern home essentials to cozy up your space.",
         ctaText: "Shop Home",
@@ -35,7 +35,7 @@ export const heroSlides: HeroSlidesTypes[] = [
     },
     {
         id: 4,
-        img: "../../../public/assets/fitness.jpg",
+        img: "./fitness.jpg",
         heading: "Live Active, Live Bold",
         subheading: "Performance wear and fitness gear for every goal.",
         ctaText: "Shop Fitness",
@@ -43,7 +43,7 @@ export const heroSlides: HeroSlidesTypes[] = [
     },
     {
         id: 5,
-        img: "../../../public/beauty.jpg",
+        img: "/beauty.jpg",
         heading: "Glow Inside & Out",
         subheading: "Skincare and beauty picks curated for your routine.",
         ctaText: "Shop Beauty",
