@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { NavLink } from "react-router-dom";
-import { Home, ShoppingCart, Heart, Bell, User, Search } from "lucide-react";
+import { Home, ShoppingCart, Heart, User, Search } from "lucide-react";
 
 // Each nav item details
 const navItems = [
