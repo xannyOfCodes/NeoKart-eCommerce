@@ -1,13 +1,13 @@
 import React, { useEffect, useState, useRef } from "react";
 import { NavLink } from "react-router-dom";
-import { Home, ShoppingCart, Heart, Bell, User } from "lucide-react";
+import { Home, ShoppingCart, Heart, Bell, User, Search } from "lucide-react";
 
 // Each nav item details
 const navItems = [
   { name: "Home", icon: Home, path: "/" },
+  { name: "Search", icon: Search, path: "/search" },
   { name: "Cart", icon: ShoppingCart, path: "/cart" },
   { name: "Wishlist", icon: Heart, path: "/wishlist" },
-  { name: "Notifications", icon: Bell, path: "/notifications" },
   { name: "Profile", icon: User, path: "/profile" },
 ];
 

@@ -1,18 +1,30 @@
-import React from 'react'
-import type { CategoryItem } from './categoryData'
-import { Link } from 'react-router-dom';
+import React from "react";
 
 
-type props = CategoryItem;
 
-const CategoryCard: React.FC<props> = ({ name, slug, icon}) => {
-  return (
-    <div className='w-[29%] flex flex-col items-center md:w-[10%]'>
-          <img src={icon} alt={slug} 
-          className='w-[1.7rem]'/>
-          <p className='text-zinc-800 text-sm cursor-pointer'><Link to={slug}>{name}</Link></p>
-    </div>
-  )
+interface CategoryCardProps {
+  name: string;
+  icon: React.ElementType;
+  slug?: string;
+  isSelected?: boolean;
+  onClick?: () => void;
 }
 
-export default CategoryCard
+const CategoryCard: React.FC<CategoryCardProps> = ({
+  name,
+  icon: Icon,
+  isSelected = false,
+  onClick,
+}) => {
+  return (
+    <div
+      onClick={onClick}
+      className={`w-[29%] flex flex-col items-center md:w-[10%] p-3 rounded-lg cursor-pointer transition-all duration-200 text-zinc-700 `}
+    >
+          <Icon className={`w-7 object-cover rounded-md  ${isSelected ? "text-red-500" : "text-zinc-600"}`}/>
+          <p className={`mt-2 text-center text-sm ${isSelected ? "text-red-500" : "text-zinc-600"}`}>{name}</p>
+    </div>
+  );
+};
+
+export default CategoryCard;

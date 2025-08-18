@@ -7,7 +7,7 @@ import SpecialForYou from '../components/Product/SpecialForYou'
 const Home = () => {
   return (
     <div>
-        <Header showSearch={true} showCart={true}/>
+        <Header showSearch={false} showCart={true}/>
         <Hero/>
         <CategorySection/>
         <SpecialForYou/>

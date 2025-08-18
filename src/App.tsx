@@ -20,6 +20,7 @@ import CartPage from "./pages/CartPage";
 import PlainLayout from "./layouts/PlainLayout";
 import { ToastContainer } from "react-toastify";
 import type { ReactNode } from "react";
+import SearchPage from "./pages/SearchPage";
 
 const RedirectIfAuth = ({ children }: { children: ReactNode }) => {
   const { user } = useAuth();
@@ -64,6 +65,7 @@ const router = createBrowserRouter(
         <Route element={<PlainLayout />}>
           <Route path="product/:productId" element={<ProductDetail />} />
           <Route path="cart" element={<CartPage />} />
+          <Route path="search" element={<SearchPage/>}/>
         </Route>
       </Route>
       
