@@ -20,7 +20,8 @@ const CategorySection: React.FC = () => {
   return (
     <div className='mt-5 p-[1rem] md:w-[85%] md:mx-auto'>
       <h2 className='text-sm font-semibold text-zinc-800 uppercase
-      md:text-center md:text-lg'>
+      md:text-center md:text-lg
+      dark:text-zinc-100'>
         <span>Shop by <span className='font-light border-b-1'>categories</span></span>
       </h2>
 
@@ -38,7 +39,8 @@ const CategorySection: React.FC = () => {
         }
       </div>
        <button onClick={() => setShowAll((prev) => !prev)}
-        className=' text-red-700 text-base font-light border-b-1 border-red-700 mt-3 mx-auto block'>{showAll ? "Show less" : "View all"}
+        className=' text-red-700 text-base font-light border-b-1 border-red-700 mt-3 mx-auto block
+        dark:text-red-500'>{showAll ? "Show less" : "View all"}
         </button>
     </div>
   )

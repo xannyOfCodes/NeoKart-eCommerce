@@ -48,10 +48,13 @@ const Signup = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-50 px-4">
-      <div className="bg-white shadow-lg rounded-2xl w-full max-w-md p-8">
+    <div className="flex justify-center items-center min-h-screen bg-gray-50 px-4
+    dark:bg-zinc-950">
+      <div className="bg-white shadow-lg rounded-2xl w-full max-w-md p-8
+      dark:bg-zinc-800">
         {/* Title */}
-        <h2 className="text-2xl font-bold text-center mb-6 text-zinc-700">Create Account</h2>
+        <h2 className="text-2xl font-bold text-center mb-6 text-zinc-700
+        dark:text-zinc-100">Create Account</h2>
 
         {/* Error */}
         {error && (
@@ -68,7 +71,8 @@ const Signup = () => {
             value={formData.firstName}
             onChange={handleChange}
             required
-            className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black"
+            className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black placeholder:text-xs
+            dark:placeholder:text-zinc-100 dark:text-zinc-100"
           />
 
           {/* Last Name */}
@@ -79,7 +83,8 @@ const Signup = () => {
             value={formData.lastName}
             onChange={handleChange}
             required
-            className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black"
+            className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black placeholder:text-xs
+            dark:placeholder:text-zinc-100 dark:text-zinc-100"
           />
 
           {/* Username */}
@@ -90,7 +95,8 @@ const Signup = () => {
             value={formData.username}
             onChange={handleChange}
             required
-            className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black"
+            className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black placeholder:text-xs
+            dark:placeholder:text-zinc-100 dark:text-zinc-100"
           />
 
           {/* Password */}
@@ -102,14 +108,15 @@ const Signup = () => {
               value={formData.password}
               onChange={handleChange}
               required
-              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black"
+              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black placeholder:text-xs
+            dark:placeholder:text-zinc-100 dark:text-zinc-100"
             />
             <button
               type="button"
               onClick={() => setShowPassword(!showPassword)}
               className="absolute inset-y-0 right-3 flex items-center text-gray-500"
             >
-              {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+              {showPassword ? <EyeOff size={18} className="dark:text-zinc-100"/> : <Eye size={18} className="dark:text-zinc-100"/>}
             </button>
           </div>
 
@@ -124,7 +131,8 @@ const Signup = () => {
         </form>
 
         {/* Login link */}
-        <p className="text-center text-sm text-gray-600 mt-4">
+        <p className="text-center text-sm text-gray-600 mt-4
+        dark:text-zinc-100">
           Already have an account?{" "}
           <span
             className="text-red-500 hover:underline"

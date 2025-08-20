@@ -70,13 +70,14 @@ const CartPage = () => {
   }, 0);
 
   return (
-    <div className="mb-50 md:w-[80%] md:mx-auto">
+    <div className="pb-50 md:w-[80%] md:mx-auto">
       {/* Cart Title */}
-      <div className="flex items-center justify-between px-5">
+      <div className="flex items-center justify-between px-4">
         <h1>
           <BackArrow/>
         </h1>
-        <h1 className="text-xl font-semibold mb-4 text-zinc-800 p-[1rem]">
+        <h1 className="text-xl font-semibold mb-4 text-zinc-800 p-[1rem] px-[0.5rem]
+        dark:text-zinc-100">
           My <span className="font-light border-b-1">Cart</span>
         </h1>
       </div>
@@ -85,10 +86,12 @@ const CartPage = () => {
       {cartItems.map((item) => (
         <div
           key={item.id}
-          className="flex items-center gap-x-5 bg-gray-200 rounded-xl mb-2 p-5 relative m-[1rem]"
+          className="flex items-center gap-x-5 bg-gray-200 rounded-xl mb-2 p-5 relative m-[1rem]
+          dark:bg-zinc-800"
         >
           {/* Product Image */}
-          <div className="flex items-center gap-4 bg-gray-300 h-full rounded-xl">
+          <div className="flex items-center gap-4 bg-gray-300 h-full rounded-xl
+          dark:bg-zinc-700">
             <Link to={`/product/${item.id}`}>
               <img
                 src={item.thumbnail}
@@ -99,7 +102,8 @@ const CartPage = () => {
           </div>
 
           {/* Product Info */}
-          <div className="text-zinc-800">
+          <div className="text-zinc-800
+          dark:text-zinc-100">
             <div>
               <p className="font-semibold">{item.title}</p>
               <p>${item.price}</p>
@@ -134,10 +138,13 @@ const CartPage = () => {
       {/* Cart Total */}
       {cartItems.length > 0 && (
         <div className="mt-5 p-4 border-t-1 bg-gray-100 border-gray-400 rounded-2xl w-full fixed bottom-0 z-10
-        md:w-[80%] md:mx-auto">
+        md:w-[80%] md:mx-auto
+        dark:bg-zinc-800">
           <p className="text-lg font-semibold flex items-center justify-between
           md:px-5">
-            <span className="text-gray-400 font-semibold">Total Price:</span> <span className="text-zinc-700">${totalPrice.toFixed(2)}</span>
+            <span className="text-gray-400 font-semibold
+            dark:text-zinc-200">Total Price:</span> <span className="text-zinc-700
+            dark:text-zinc-100">${totalPrice.toFixed(2)}</span>
           </p>
           <button className="bg-red-500 block w-full px-5 py-3 text-zinc-50 rounded-xl mt-10">
             Checkout

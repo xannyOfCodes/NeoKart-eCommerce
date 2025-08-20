@@ -19,10 +19,11 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
   return (
     <div
       onClick={onClick}
-      className={`w-[29%] flex flex-col items-center md:w-[10%] p-3 rounded-lg cursor-pointer transition-all duration-200 text-zinc-700 `}
+      className={`w-[29%] flex flex-col items-center md:w-[10%] p-3 rounded-lg cursor-pointer transition-all duration-200 
+         `}
     >
-          <Icon className={`w-7 object-cover rounded-md  ${isSelected ? "text-red-500" : "text-zinc-600"}`}/>
-          <p className={`mt-2 text-center text-sm ${isSelected ? "text-red-500" : "text-zinc-600"}`}>{name}</p>
+          <Icon className={`w-7 object-cover rounded-md  ${isSelected ? "text-red-500" : "text-zinc-600 dark:text-zinc-100"}`}/>
+          <p className={`mt-2 text-center text-sm ${isSelected ? "text-red-500" : "text-zinc-600 dark:text-zinc-100"}`}>{name}</p>
     </div>
   );
 };

@@ -14,7 +14,8 @@ const BackArrow: React.FC = () => {
   return (
     <button
       onClick={handleGoBack} // Runs the back function when clicked
-      className=" text-gray-800 cursor-pointer hover:text-black transition-colors"
+      className=" text-gray-800 cursor-pointer hover:text-black transition-colors
+      dark:text-zinc-100"
     >
       {/* Arrow Icon */}
       <ArrowLeft size={25} />

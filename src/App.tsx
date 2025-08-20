@@ -21,6 +21,7 @@ import PlainLayout from "./layouts/PlainLayout";
 import { ToastContainer } from "react-toastify";
 import type { ReactNode } from "react";
 import SearchPage from "./pages/SearchPage";
+import ProfilePage from "./pages/ProfilePage";
 
 const RedirectIfAuth = ({ children }: { children: ReactNode }) => {
   const { user } = useAuth();
@@ -61,6 +62,7 @@ const router = createBrowserRouter(
         <Route element={<RootLayout />}>
           <Route index element={<Home />} />
           <Route path="wishlist" element={<WishlistPage />} />
+          <Route path="profile" element={<ProfilePage/>}/>
         </Route>
         <Route element={<PlainLayout />}>
           <Route path="product/:productId" element={<ProductDetail />} />
@@ -76,7 +78,7 @@ const router = createBrowserRouter(
 const App = () => {
   return (
     <AuthProvider>
-      <RouterProvider router={router} />
+      <RouterProvider router={router}/>
       <ToastContainer/>
     </AuthProvider>
   );

@@ -174,7 +174,7 @@ const SearchPage: React.FC = () => {
   // 5) RENDER
   // ============================================================
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen ">
       {/* SearchBar controls typing, search submit, and "sort sheet" open */}
       <SearchBar
         onSearch={handleSearchSubmit}       // Enter/submit triggers a search
@@ -270,18 +270,26 @@ const SearchPage: React.FC = () => {
             {/* Product grid */}
             <div className="grid grid-cols-2 gap-4">
               {sortedProducts.map((p) => (
-                <div key={p.id} className="bg-white rounded-xl shadow-sm p-3 flex flex-col">
-                  <Link to={`/product/${p.id}`}>
+                <div key={p.id} className="bg-white rounded-xl shadow-sm p-3 flex flex-col text-zinc-800
+                md:flex-row md:items-center md:gap-x-5">
+                 <div className="md:w-[50%]">
+                     <Link to={`/product/${p.id}`}>
                       <img
                     src={p.thumbnail}
                     alt={p.title}
-                    className="w-full h-32 object-cover rounded-lg"
+                    className="w-full h-32 object-cover rounded-lg
+                    "
                   />
                   </Link>
-                  <h3 className="text-sm font-medium mt-2 line-clamp-2">{p.title}</h3>
+                 </div>
+                  <div>
+                    <h3 className="text-sm font-medium mt-2 line-clamp-2">{p.title}</h3>
+                    <p className="hidden text-xs mt-2 pr-2
+                    md:inline-block md:whitespace-normal">{p.description}</p>
                   <div className="flex items-center justify-between mt-1">
                     <p className="text-red-500 font-semibold">${p.price}</p>
                     <p className="text-xs text-gray-500 flex items-center gap-x-0.5"><img src={yellowStar} alt=""  className="w-3.5 inline"/> <span>{p.rating}</span></p>
+                  </div>
                   </div>
                 </div>
               ))}

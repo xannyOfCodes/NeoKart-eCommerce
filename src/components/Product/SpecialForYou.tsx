@@ -24,7 +24,8 @@ const SpecialForYou = () => {
     md:w-[90%] md:mx-auto">
       <div className="flex items-center md:justify-center">
         <h2 className='text-sm font-semibold text-zinc-800 uppercase
-      md:text-center md:text-lg'>Special <span className='font-light border-b-1'>for You</span></h2>
+      md:text-center md:text-lg
+      dark:text-zinc-100'>Special <span className='font-light border-b-1'>for You</span></h2>
       </div>
 
       <div className="flex items-center gap-3 overflow-x-scroll mt-3

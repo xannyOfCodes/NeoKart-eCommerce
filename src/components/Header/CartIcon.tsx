@@ -18,8 +18,9 @@ const CartIcon: FC<CartIconProps> = ({ itemCount = 0}) => {
     <div onClick={handleCartClick}
     className='relative inline-block'>
         <button
-        className='text-lg font-bold h-[2.5rem] w-[2.5rem] text-zinc-800 bg-white rounded-full flex items-center justify-center'>
-            <ShoppingCart/>
+        className='text-lg font-bold h-[2.5rem] w-[2.5rem] text-zinc-800 bg-white rounded-full flex items-center justify-center
+        dark:bg-zinc-700'>
+            <ShoppingCart className='dark:text-zinc-100'/>
         </button>
         {
             itemCount > 0 && (

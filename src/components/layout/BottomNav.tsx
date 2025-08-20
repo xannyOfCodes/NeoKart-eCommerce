@@ -47,7 +47,8 @@ const BottomNav: React.FC = () => {
     <div
       className={`fixed bottom-0 left-0 w-full bg-gray-100  transition-transform duration-300 ${
         isVisible ? "translate-y-0" : "translate-y-full"
-      }`}
+      }
+      dark:bg-zinc-950`}
     >
       <div className="flex justify-around items-center w-ful mx-auto shadow-lg border-t-1 border-t-gray-300 p-2">
         {navItems.map(({ name, icon: Icon, path }) => (
@@ -56,7 +57,7 @@ const BottomNav: React.FC = () => {
             to={path}
             className={({ isActive }) =>
               `flex flex-col items-center gap-1 text-sm transition-colors p-3 rounded-full ${
-                isActive ? "text-red-600 bg-red-200" : "text-zinc-800"
+                isActive ? "text-red-600 bg-red-200 dark:text-red-200 dark:bg-red-800" : "text-zinc-800 dark:text-zinc-100"
               }`
             }
           >
